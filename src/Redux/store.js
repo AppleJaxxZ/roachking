@@ -5,7 +5,7 @@ import { createStore, applyMiddleware } from "redux";
 import { persistStore } from "redux-persist";
 
 //logger is used to console.log action payloads.
-import { logger } from "redux-logger";
+import { logger } from 'redux-logger'
 //root reducer is the main project reducer where all of the projects reducers flow into.
 import rootReducer from "./root-reducer";
 //assinged logger value to middleware array incase we want to add more items here later.

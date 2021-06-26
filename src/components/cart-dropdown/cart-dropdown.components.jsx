@@ -2,10 +2,10 @@ import React from 'react';
 import './cart-dropdown.styles.scss';
 import CustomButton from '../custom-button/custom-button.components';
 import CartItem from '../cart-item/cart-item.components';
-import { selectCartItems } from "./../../redux/cart/cart.selectors";
+import { selectCartItems } from "../../Redux/cart/cart.selectors";
 import { createStructuredSelector } from "reselect";
 import { withRouter } from "react-router-dom";
-import { toggleCartHidden } from "./../../redux/cart/cart.actions";
+import { toggleCartHidden } from "../../Redux/cart/cart.actions"
 
 
 const CartDropdown = ({ cartItems, history, dispatch }) => (

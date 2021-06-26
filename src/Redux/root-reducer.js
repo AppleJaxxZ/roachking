@@ -3,6 +3,7 @@ import { combineReducers } from "redux";
 
 //imports persist reducer.
 import { persistReducer } from "redux-persist";
+import cartReducer from './cart/cart.reducers'
 
 //gives us our local storage object on our window browser. Session storage is from another package library.
 import storage from "redux-persist/lib/storage";
