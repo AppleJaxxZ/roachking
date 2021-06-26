@@ -1,0 +1,33 @@
+.about {
+    height: auto;
+    width: 100%;
+
+
+    border: 2px solid black;
+
+}
+
+.flex-about {
+    display: flex;
+    background-color: #f5f5f5;
+
+}
+
+
+
+
+.about-paragraph {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.mission-section {
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.service-paragraph {
+    padding-left: 16px;
+    padding-right: 16px;
+
+}
