@@ -6,18 +6,18 @@ import { selectDirectorySections } from '../../Redux/directory/directors.selecto
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 
-const Directory = ({ sections, item }) => {
+const Directory = ({ sections }) => {
 
     return (
         <div className='directory-menu'>
 
             {
-                sections.map(({ item: { id, title, imageUrl } }) => (
+                sections.map(({ id, title, imageUrl, price }) => (
                     <div className='collection-item'>
                         <img className='directory-img' src={imageUrl} key={id} alt={title} />
                         <div className="collection-footer">
-                            <span className="name">{item.title.toUpperCase()}</span>
-                            <span className="price">{item.price}</span>
+                            <span className="name">{title.toUpperCase()}</span>
+                            <span className="price">{price}</span>
 
                         </div>
 
