@@ -1,21 +1,20 @@
 import React from 'react';
-import { directoryData } from '../../Data/Data';
+
 import './Directory.styles.scss'
 import CustomButton from '../custom-button/custom-button.components';
+import { selectDirectorySections } from '../../Redux/directory/directors.selectors'
+import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 
-
-const Directory = () => {
-
-
-
+const Directory = ({ sections, item }) => {
 
     return (
         <div className='directory-menu'>
 
             {
-                directoryData.map((item) => (
+                sections.map(({ item: { id, title, imageUrl } }) => (
                     <div className='collection-item'>
-                        <img className='directory-img' src={item.imageUrl} key={item.id} alt={item.title} />
+                        <img className='directory-img' src={imageUrl} key={id} alt={title} />
                         <div className="collection-footer">
                             <span className="name">{item.title.toUpperCase()}</span>
                             <span className="price">{item.price}</span>
@@ -36,8 +35,12 @@ const Directory = () => {
     )
 }
 
+const mapStateToProps = createStructuredSelector({
+    sections: selectDirectorySections,
+});
 
-export default Directory;
+export default connect(mapStateToProps)(Directory);
+
 
 
 // {/* <div className="collection-footer">

@@ -4,18 +4,21 @@ const INITIAL_STATE = {
             title: "xtrasmall",
             imageUrl: "https://i.ibb.co/B6kqz46/xsmDubia.png",
             id: 1,
+            price: "10",
             linkUrl: "shop/hats",
         },
         {
             title: "small1/2'",
             imageUrl: "https://i.ibb.co/mJN7GJt/sm-Dubia-Half-Inch.png",
             id: 2,
+            price: "10",
             linkUrl: "shop/jackets",
         },
         {
             title: "medium5/8",
             imageUrl: "https://i.ibb.co/DRvM2RM/med-Dubia-Five-Eights.png",
             id: 3,
+            price: "15",
             linkUrl: "shop/sneakers",
         },
         {
@@ -23,6 +26,7 @@ const INITIAL_STATE = {
             imageUrl: "https://i.ibb.co/hK32xt3/lrgDubia.png",
             size: "large",
             id: 4,
+            price: "20",
             linkUrl: "shop/womens",
         },
         {
@@ -30,6 +34,7 @@ const INITIAL_STATE = {
             imageUrl: "https://i.ibb.co/8mPVyXS/xlDubia.png",
             size: "large",
             id: 5,
+            price: "25",
             linkUrl: "shop/mens",
         },
     ],

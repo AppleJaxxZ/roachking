@@ -4,6 +4,7 @@ import { combineReducers } from "redux";
 //imports persist reducer.
 import { persistReducer } from "redux-persist";
 import cartReducer from './cart/cart.reducers'
+import directoryReducer from './directory/directory.reducer'
 
 //gives us our local storage object on our window browser. Session storage is from another package library.
 import storage from "redux-persist/lib/storage";
@@ -18,6 +19,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
     cart: cartReducer,
+    directory: directoryReducer,
 });
 
 export default persistReducer(persistConfig, rootReducer);
