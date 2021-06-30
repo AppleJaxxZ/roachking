@@ -1,27 +1,12 @@
-import React from 'react';
-import './Header.styles.css'
-import roachKing from '../../media/roachKing.png';
+import React from "react";
+import "./Header.styles.scss";
+
 const Header = () => {
-   return (
-      <header className="section">
-         <div className="row">
-
-            <div className="logo"><img id="logo" src={roachKing} alt="#" /></div>
-            <h1 className="header-title">Dragon Feeders</h1>
-
-         </div>
-
-
-
-
-
-
-
-
-      </header>
-   )
-
-}
-
+  return (
+    <header className="header">
+      <div className="header__container">Dragon Feeders</div>
+    </header>
+  );
+};
 
 export default Header;

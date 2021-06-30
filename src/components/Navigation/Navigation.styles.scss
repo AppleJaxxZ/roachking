@@ -2,12 +2,18 @@
   position: relative;
 }
 .menu-nav {
+  border: 2px solid #000;
+
   display: flex;
   list-style-type: none;
   justify-content: space-around;
-  background-color: blue;
-  color: white;
+
   align-items: center;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 60px;
+  margin-right: 60px;
+
+  @media screen and (max-width: 860px) {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
 }
