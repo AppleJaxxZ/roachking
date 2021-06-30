@@ -4,7 +4,7 @@ import './About.styles.css';
 
 const About = () => {
     return (
-        <div className='about'>
+        <div id='#section1' className='about'>
             <div className='flex-about'>
                 <div className='about-container'>
                     <h5>About</h5>

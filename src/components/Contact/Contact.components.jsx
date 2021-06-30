@@ -4,7 +4,7 @@ import './Contact.styles.css';
 
 const Contact = () => {
     return (
-        <div className='contact-container'>
+        <div id='#section4' className='contact-container'>
             <div className="flex-contact">
                 <div>
                     <p>Phone: 555-555-5555</p>

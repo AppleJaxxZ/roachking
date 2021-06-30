@@ -13,10 +13,13 @@ import { store, persistor } from "./Redux/store";
 //enables Persist to be used in our app and gives us component to wrap our app in.
 import { PersistGate } from "redux-persist/integration/react";
 
+import ScrollHandler from './components/scroll-handler/scroll-handler'
+
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <PersistGate persistor={persistor}>
+        <ScrollHandler />
         <App />
       </PersistGate>
     </BrowserRouter>

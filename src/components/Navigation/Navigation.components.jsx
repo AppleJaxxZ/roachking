@@ -11,11 +11,11 @@ const Navigation = ({ hidden }) => {
   return (
     <nav className="nav-flex">
       <ul className="menu-nav">
-        <Link><li>Home</li></Link>
-        <Link><li>About</li></Link>
-        <Link><li>Testmonial</li></Link>
-        <Link><li>Shop</li></Link>
-        <Link><li>Contact Us</li></Link>
+        <Link to='/'><li>Home</li></Link>
+        <Link to='#section1'><li>About</li></Link>
+        <Link to='#section2'><li >Testmonial</li></Link>
+        <Link to='#section3'><li>Shop</li></Link>
+        <Link to='#section4'><li>Contact Us</li></Link>
         <li style={{ backgroundColor: "red", position: "relative" }}>
           <CartIcon />
 

@@ -9,7 +9,7 @@ import { createStructuredSelector } from "reselect";
 
 const Directory = ({ sections, addItem }) => {
   return (
-    <div className="directory-menu">
+    <div id='#section3' className="directory-menu">
       {sections.map(({ id, title, imageUrl, price }) => (
         <div className="collection-item">
           <img className="directory-img" src={imageUrl} key={id} alt={title} />
