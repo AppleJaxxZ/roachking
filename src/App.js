@@ -12,14 +12,19 @@ import MidSection from './components/Mid-Section/Mid-Section.components';
 import About from './components/About/About.components';
 import Contact from './components/Contact/Contact.components';
 import Footer from './components/Footer/Footer.components'
-
+import Checkout from './pages/checkout.pages';
+import { Switch, Route } from "react-router-dom";
 function App() {
 
   library.add(fab);
   return (
     <div className="App">
+
       <Header />
       <Navigation />
+      <Switch>
+        <Route exact path="/checkout" component={Checkout} />
+      </Switch>
       <Directory />
       <MidSection />
       <About />
@@ -28,7 +33,8 @@ function App() {
 
 
 
-    </div>
+
+    </div >
   );
 }
 
