@@ -15,7 +15,7 @@ const Directory = ({ sections, addItem }) => {
           <img className="directory-img" src={imageUrl} key={id} alt={title} />
           <div className="collection-footer">
             <span className="name">{title.toUpperCase()}</span>
-            <span className="price">{price}</span>
+            <span className="price">${price}</span>
           </div>
 
           <CustomButton
