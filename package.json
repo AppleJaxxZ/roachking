@@ -8,21 +8,9 @@
     "heroku-postbuild": "cd roachking && npm install && npm run build"
   },
   "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.0",
-    "compression": "^1.7.4",
-    "concurrently": "^6.1.0",
-    "connect-flash": "^0.1.1",
     "cors": "^2.8.5",
-    "dotenv": "^9.0.2",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
-    "express-sslify": "^1.2.0",
-    "express-validator": "^6.11.1",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.12.8",
-    "passport": "^0.4.1",
-    "passport-jwt": "^4.0.0",
-    "path": "^0.12.7",
-    "stripe": "^8.148.0"
+    "stripe": "^8.160.0"
   }
 }
