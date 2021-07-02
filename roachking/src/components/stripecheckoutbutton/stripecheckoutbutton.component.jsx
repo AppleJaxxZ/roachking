@@ -15,12 +15,15 @@ const StripeCheckoutButton = ({ price }) => {
         <StripeCheckout
             label="Pay Now"
             name="DRAGON FEEDERS Ltd."
-            bliingAddress
-            shippingAddress
+            bliingAddress={true}
+            shippingAddress={true}
             description={`Your total is $${price}`}
             amount={PriceForStripe}
+            currency="USD"
             panelLabel="Pay Now"
             token={onToken}
+            billingAddressCollection
+            shippingAddressCollection
             stripeKey={publishableKey}
         />
     );

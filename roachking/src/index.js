@@ -14,13 +14,20 @@ import { store, persistor } from "./Redux/store";
 import { PersistGate } from "redux-persist/integration/react";
 
 import ScrollHandler from './components/scroll-handler/scroll-handler'
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+const stripePromise = loadStripe(process.env.REACT_APP_PUBLISHABLE_KEY);
+
 
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <PersistGate persistor={persistor}>
         <ScrollHandler />
-        <App />
+        <Elements stripe={stripePromise}>
+          <App />
+        </Elements>
+
       </PersistGate>
     </BrowserRouter>
   </Provider>,
