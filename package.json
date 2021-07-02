@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
-    "heroku-postbuild": "cd roachking && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
+    "express-sslify": "^1.2.0",
     "stripe": "^8.160.0"
   }
 }

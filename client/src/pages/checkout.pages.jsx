@@ -15,7 +15,7 @@ const CheckoutPage = ({ cartItems, total }) => {
   const payNow = async () => {
     const {
       data: { sessionId },
-    } = await axios.post("http://localhost:8080/create-checkout-session", {
+    } = await axios.post("http://localhost:5000/create-checkout-session", {
       line_items: [
         {
           quantity: 1,
