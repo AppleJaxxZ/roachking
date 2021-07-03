@@ -5,8 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node server/index.js",
-    "heroku-postbuild": "cd client && npm install && npm run build",
-    
+    "client": "cd client && npm start",
+    "server": "node server.js",
+    "build": "cd client && npm run build",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "dependencies": {
     "cors": "^2.8.5",
