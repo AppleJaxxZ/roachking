@@ -11,7 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-     "body-parser": "^1.18.3",
+    "body-parser": "^1.18.3",
     "compression": "1.7.4",
     "express-sslify": "1.2.0",
     "dotenv": "^10.0.0",
