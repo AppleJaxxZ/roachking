@@ -11,11 +11,19 @@ const Navigation = ({ hidden }) => {
   return (
     <nav className="nav-flex">
       <ul className="menu-nav">
-        <Link to='/'><li key={1}>Home</li></Link>
-        <Link to='#section1'><li key={1}>About</li></Link>
-        <Link to='#section2'><li key={2}>Testmonial</li></Link>
-        <Link to='#section3'><li key={3}>Shop</li></Link>
-        <Link to='#section4'><li key={4}>Contact Us</li></Link>
+        <Link to="/">
+          <li key={1}>Home</li>
+        </Link>
+        <Link to="#section1">
+          <li key={1}>About</li>
+        </Link>
+        {/* <Link to='#section2'><li key={2}>Testmonial</li></Link> */}
+        <Link to="#section3">
+          <li key={3}>Shop</li>
+        </Link>
+        <Link to="#section4">
+          <li key={4}>Contact Us</li>
+        </Link>
         <li style={{ backgroundColor: "white", position: "relative" }}>
           <CartIcon />
 
