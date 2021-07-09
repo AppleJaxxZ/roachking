@@ -1,7 +1,14 @@
 .payments-icons {
-    padding-left: 10px;
+  padding-left: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 #icon {
-    padding-left: 10px;
+  padding-left: 10px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
 }

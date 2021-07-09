@@ -5,7 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const Footer = () => {
   return (
     <div>
-      <h3>Copyright 2021 Dragon Feeders </h3>
+      <div className="footer-content">
+        <h3>Copyright 2021 Dragon Feeders </h3>
+      </div>
       <div className="payments-icons">
         <FontAwesomeIcon id="icon" icon={["fab", "cc-mastercard"]} size="3x" />
         <FontAwesomeIcon id="icon" icon={["fab", "cc-discover"]} size="3x" />

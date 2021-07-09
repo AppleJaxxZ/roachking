@@ -3,4 +3,10 @@
   width: 100%;
   background-color: khaki;
   margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.paragraphs {
+  flex-direction: column;
 }
