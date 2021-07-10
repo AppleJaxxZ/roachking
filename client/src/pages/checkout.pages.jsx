@@ -70,7 +70,7 @@ const CheckoutPage = ({ cartItems, total }) => {
         *Please use the following test credit card numbers for payments* <br />
         4242 4242 4242 4242 - Exp: 01/20 - CVV: 123
       </div>
-      <form className="payNowForm">
+      <div className="payNowForm">
         <label for="email">Enter Email Then Click Pay Now</label>
 
         <input
@@ -80,7 +80,7 @@ const CheckoutPage = ({ cartItems, total }) => {
         />
         <button onClick={() => payNow()}>Pay now</button>
         {/* <StripeCheckoutButton price={total} /> */}
-      </form>
+      </div>
     </div>
   );
 };
