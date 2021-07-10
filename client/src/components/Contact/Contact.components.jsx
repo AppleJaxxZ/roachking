@@ -6,7 +6,7 @@ const Contact = () => {
     <div id="#section4" className="contact-container">
       <div className="flex-contact">
         <div>
-          <p>Phone: 555-555-5555</p>
+          <p>Phone: +1(484)-309-3456</p>
           <p>Email: reptilegoodies@yahoo.com</p>
           <i>Instagram</i>
         </div>

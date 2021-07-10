@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./checkout.styles.scss";
 
 import { createStructuredSelector } from "reselect";
@@ -11,6 +11,8 @@ import CheckoutItem from "../components/checkout-item/checkout-item.components";
 import axios from "axios";
 
 const CheckoutPage = ({ cartItems, total }) => {
+  const [address, setAddress] = useState("");
+
   const stripe = useStripe();
   const payNow = async () => {
     const {
@@ -21,16 +23,16 @@ const CheckoutPage = ({ cartItems, total }) => {
           quantity: 1,
           price_data: {
             currency: "usd",
-            unit_amount: 50,
+            unit_amount: total * 100,
             product_data: {
-              name: "Roach",
-              description: "Amazing and delicious",
+              name: "Order Total: ",
+              description: "Thank you for your purchase.",
               images: ["https://i.ibb.co/DRvM2RM/med-Dubia-Five-Eights.png"],
             },
           },
         },
       ],
-      customer_email: "smackanalex@gmail.com",
+      customer_email: address,
     });
     const { error } = await stripe.redirectToCheckout({
       sessionId,
@@ -65,11 +67,20 @@ const CheckoutPage = ({ cartItems, total }) => {
       <div className="total">TOTAL: ${total}</div>
 
       <div className="test-warning">
-        *Please use the following test creditcard numbers for payments* <br />
+        *Please use the following test credit card numbers for payments* <br />
         4242 4242 4242 4242 - Exp: 01/20 - CVV: 123
       </div>
-      <button onClick={() => payNow()}>Pay now</button>
-      {/* <StripeCheckoutButton price={total} /> */}
+      <form className="payNowForm">
+        <label for="email">Enter Email Then Click Pay Now</label>
+
+        <input
+          value={address}
+          name="email"
+          onChange={(e) => setAddress(e.target.value)}
+        />
+        <button onClick={() => payNow()}>Pay now</button>
+        {/* <StripeCheckoutButton price={total} /> */}
+      </form>
     </div>
   );
 };

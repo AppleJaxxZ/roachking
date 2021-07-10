@@ -49,3 +49,16 @@
     color: red;
   }
 }
+
+.payNowForm {
+  display: flex;
+  flex-direction: column;
+  button {
+    width: 200px;
+    font-size: larger;
+    margin-top: 1px;
+    height: 3rem;
+    background-color: rgb(18, 18, 212);
+    color: white;
+  }
+}
