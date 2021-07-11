@@ -9,4 +9,12 @@
 
 .paragraphs {
   flex-direction: column;
+  font-size: x-large;
+  font-weight: 400;
+}
+
+p,
+p,
+i {
+  font-size: 20px;
 }
