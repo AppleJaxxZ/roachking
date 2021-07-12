@@ -9,10 +9,10 @@ import { createStructuredSelector } from "reselect";
 
 const Directory = ({ sections, addItem }) => {
   return (
-    <div id='#section3' className="directory-menu">
+    <div id="#section3" className="directory-menu">
       {sections.map(({ id, title, imageUrl, price }) => (
-        <div className="collection-item">
-          <img className="directory-img" src={imageUrl} key={id} alt={title} />
+        <div key={id} className="collection-item">
+          <img className="directory-img" src={imageUrl} alt={title} />
           <div className="collection-footer">
             <span className="name">{title.toUpperCase()}</span>
             <span className="price">${price}</span>

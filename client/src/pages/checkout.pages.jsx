@@ -71,7 +71,7 @@ const CheckoutPage = ({ cartItems, total }) => {
         4242 4242 4242 4242 - Exp: 01/20 - CVV: 123
       </div>
       <div className="payNowForm">
-        <label for="email">Enter Email Then Click Pay Now</label>
+        <label>Enter Email Then Click Pay Now</label>
 
         <input
           value={address}

@@ -9,36 +9,38 @@ const Contact = () => {
   return (
     <div id="#section4" className="contact-container">
       <div className="flex-contact">
-        <div>
-          <p>Phone: +1(484)-309-3456</p>
-          <p>Email: reptilegoodies@yahoo.com</p>
-          <a href="tel:+1(484)-309-3456">
-            <FontAwesomeIcon id="icon" icon={faPhone} size="3x" />
-          </a>
-          <Link
-            to="#"
-            onClick={(e) => {
-              window.open("mailto:reptilegoodies@yahoo.com");
-              e.preventDefault();
-            }}
-          >
-            <FontAwesomeIcon id="icon" icon={faEnvelope} size="3x" />
-          </Link>
-          <a href="https://www.instagram.com/dragonfeeders" target="_blank">
-            <FontAwesomeIcon id="icon" icon={["fab", "instagram"]} size="3x" />
-          </a>
+        <div className="paragraphs">
+          <div className="fa-contact-icons">
+            <a href="tel:+1(484)-309-3456">
+              <FontAwesomeIcon id="icon" icon={faPhone} size="1x" />
+            </a>
+            <Link
+              to="#"
+              onClick={(e) => {
+                window.open("mailto:reptilegoodies@yahoo.com");
+                e.preventDefault();
+              }}
+            >
+              <FontAwesomeIcon id="icon" icon={faEnvelope} size="1x" />
+            </Link>
+            <a
+              href="https://www.instagram.com/dragonfeeders"
+              rel="noreferrer"
+              target="_blank"
+            >
+              <FontAwesomeIcon
+                id="icon"
+                icon={["fab", "instagram"]}
+                size="1x"
+              />
+            </a>
+          </div>
+          <h5>
+            We are located in Easton, Pa. If you'd like to set-up an in person
+            purchase please Email, Text, or Call us. Phone Calls Will Be
+            Accepted between 10am and 6pm Eastern Standard Time. -Thank you! .{" "}
+          </h5>
         </div>
-      </div>
-
-      <div className="paragraphs">
-        <h5>
-          Please feel free to give us call ANYDAY between 10am and 7pm Eastern
-          Standard Time.{" "}
-        </h5>
-
-        <h5>
-          If your in the Lehigh Valley, Pa area you can also scheudle a pickup!
-        </h5>
       </div>
     </div>
   );
