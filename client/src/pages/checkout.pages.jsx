@@ -18,52 +18,26 @@ const CheckoutPage = ({ cartItems, total }) => {
   const stripe = useStripe();
   const payNow = async () => {
     // e.preventDefault();
-    //   const line_items = cartItems.map((item) => {
-    //     return {
-    //       quantity: item.quantity,
-    //       price_data: {
-    //         currency: "usd",
-    //         unit_amount: item.price * 100,
-    //         product_data: {
-    //           name: item.name,
-    //           description: item.name,
-    //           images: [item.imageUrl],
-    //         },
-    //       },
-    //     };
-    //   });
-
-    //   const response = fetchFromAPI("/create-checkout-session", {
-    //     body: { line_items, customer_email: address },
-    //   });
-
-    //   const { sessionId } = response;
-    //   const { error } = await stripe.redirectToCheckout({
-    //     sessionId,
-    //   });
-    //   if (error) {
-    //     console.log(error);
-    //   }
-    // };
-    const {
-      data: { sessionId },
-    } = await axios.post("/create-checkout-session", {
-      line_items: [
-        {
-          quantity: 1,
-          price_data: {
-            currency: "usd",
-            unit_amount: total * 100,
-            product_data: {
-              name: "Order Total: ",
-              description: "Thank you for your purchase.",
-              images: ["https://i.ibb.co/qMVynqD/roaches6.png"],
-            },
+    const line_items = cartItems.map((item) => {
+      return {
+        quantity: item.quantity,
+        price_data: {
+          currency: "usd",
+          unit_amount: item.price * 100,
+          product_data: {
+            name: item.name,
+            description: item.name,
+            images: [item.imageUrl],
           },
         },
-      ],
-      customer_email: address,
+      };
     });
+
+    const response = await fetchFromAPI("/create-checkout-session", {
+      body: { line_items, customer_email: address },
+    });
+
+    const { sessionId } = response;
     const { error } = await stripe.redirectToCheckout({
       sessionId,
     });
@@ -71,6 +45,34 @@ const CheckoutPage = ({ cartItems, total }) => {
       console.log(error);
     }
   };
+
+  // const {
+  //     data: { sessionId },
+  //   } = await axios.post("/create-checkout-session", {
+  //     line_items: [
+  //       {
+  //         quantity: 1,
+  //         price_data: {
+  //           currency: "usd",
+  //           unit_amount: item.total * 100,
+  //           product_data: {
+  //             name: "Order Total: ",
+  //             description: "Thank you for your purchase.",
+  //             images: [item.imageUrl],
+  //           },
+  //         },
+  //       },
+  //     ],
+  //     customer_email: address,
+  //   });
+  //   const { error } = await stripe.redirectToCheckout({
+  //     sessionId,
+  //   });
+  //   if (error) {
+  //     console.log(error);
+  //   }
+
+  // };
   return (
     <div className="checkout-page">
       <div className="checkout-header">
@@ -108,7 +110,7 @@ const CheckoutPage = ({ cartItems, total }) => {
           name="email"
           onChange={(e) => setAddress(e.target.value)}
         />
-        <button onClick={() => payNow()}>Pay now</button>
+        <button onClick={() => payNow()}>PAY NOW</button>
         {/* <StripeCheckoutButton price={total} /> */}
       </div>
     </div>
