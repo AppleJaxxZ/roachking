@@ -1,18 +1,15 @@
-const API = 'http://localhost:8080';
+const API = "http://localhost:5000";
 
 export async function fetchFromAPI(endpoint, opts) {
-    const { method, body } = { method: 'POST', body: null, ...opts };
+  const { method, body } = { method: "POST", body: null, ...opts };
 
+  const res = await fetch(`${API}/${endpoint}`, {
+    method,
+    ...(body && { body: JSON.stringify(body) }),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
 
-    const res = await fetch(`${API}/${endpoint}`, {
-        method,
-        ...(body && { body: JSON.stringify(body) }),
-        headers: {
-            'Content-Type': 'application/json',
-
-        },
-
-    });
-
-    return res.json();
+  return res.json();
 }

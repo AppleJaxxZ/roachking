@@ -7,33 +7,37 @@ import { connect } from "react-redux";
 
 import { useStripe } from "@stripe/react-stripe-js";
 import CheckoutItem from "../components/checkout-item/checkout-item.components";
+import { fetchFromAPI } from "../components/API/helpers";
 // import StripeCheckoutButton from "../components/stripecheckoutbutton/stripecheckoutbutton.component";
-import axios from "axios";
+// import axios from "axios";
+// import e from "cors";
 
 const CheckoutPage = ({ cartItems, total }) => {
   const [address, setAddress] = useState("");
 
   const stripe = useStripe();
   const payNow = async () => {
-    const {
-      data: { sessionId },
-    } = await axios.post("/create-checkout-session", {
-      line_items: [
-        {
-          quantity: 1,
-          price_data: {
-            currency: "usd",
-            unit_amount: total * 100,
-            product_data: {
-              name: "Order Total: ",
-              description: "Thank you for your purchase.",
-              images: ["https://i.ibb.co/DRvM2RM/med-Dubia-Five-Eights.png"],
-            },
+    // e.preventDefault();
+    const line_items = cartItems.map((item) => {
+      return {
+        quantity: item.quantity,
+        price_data: {
+          currency: "usd",
+          unit_amount: item.price * 100,
+          product_data: {
+            name: item.name,
+            description: item.name,
+            images: [item.imageUrl],
           },
         },
-      ],
-      customer_email: address,
+      };
     });
+
+    const response = fetchFromAPI("/create-checkout-session", {
+      body: { line_items, customer_email: address },
+    });
+
+    const { sessionId } = response;
     const { error } = await stripe.redirectToCheckout({
       sessionId,
     });
@@ -41,6 +45,33 @@ const CheckoutPage = ({ cartItems, total }) => {
       console.log(error);
     }
   };
+  //   const {
+  //     data: { sessionId },
+  //   } = await axios.post("/create-checkout-session", {
+
+  //   line_items: [
+  //     {
+  //       quantity: 1,
+  //       price_data: {
+  //         currency: "usd",
+  //         unit_amount: total * 100,
+  //         product_data: {
+  //           name: "Order Total: ",
+  //           description: "Thank you for your purchase.",
+  //           images: ["https://i.ibb.co/DRvM2RM/med-Dubia-Five-Eights.png"],
+  //         },
+  //       },
+  //     },
+  //   ],
+  //   customer_email: address,
+  // });
+  //   const { error } = await stripe.redirectToCheckout({
+  //     sessionId,
+  //   });
+  //   if (error) {
+  //     console.log(error);
+  //   }
+  // };
   return (
     <div className="checkout-page">
       <div className="checkout-header">
