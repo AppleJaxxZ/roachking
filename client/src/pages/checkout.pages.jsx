@@ -18,22 +18,22 @@ const CheckoutPage = ({ cartItems, total }) => {
   const stripe = useStripe();
   const payNow = async () => {
     // e.preventDefault();
-    const line_items = cartItems.map((item) => {
+    const line_items = cartItems.map((items) => {
       return {
-        quantity: item.quantity,
+        quantity: items.quantity,
         price_data: {
           currency: "usd",
-          unit_amount: item.price * 100,
+          unit_amount: items.price * 100,
           product_data: {
-            name: item.name,
-            description: item.name,
-            images: [item.imageUrl],
+            name: items.title,
+            description: items.description,
+            images: [items.imageUrl],
           },
         },
       };
     });
-
-    const response = await fetchFromAPI("/create-checkout-session", {
+    console.log(line_items);
+    const response = await fetchFromAPI("create-checkout-session", {
       body: { line_items, customer_email: address },
     });
 
@@ -46,32 +46,52 @@ const CheckoutPage = ({ cartItems, total }) => {
     }
   };
 
+  // {
+  //       id: 2,
+  //     title: "small1/2'",
+  //     imageUrl: "https://i.ibb.co/mJN7GJt/sm-Dubia-Half-Inch.png",
+  //     price: 10,
+  //     quantity: 2
+  //   }
+
   // const {
-  //     data: { sessionId },
-  //   } = await axios.post("/create-checkout-session", {
-  //     line_items: [
-  //       {
-  //         quantity: 1,
-  //         price_data: {
-  //           currency: "usd",
-  //           unit_amount: item.total * 100,
-  //           product_data: {
-  //             name: "Order Total: ",
-  //             description: "Thank you for your purchase.",
-  //             images: [item.imageUrl],
-  //           },
+  //   data: { sessionId },
+  // } = await axios.post("/create-checkout-session", {
+  //   line_items: [
+  //     {
+  //       quantity: 1,
+  //       price_data: {
+  //         currency: "usd",
+  //         unit_amount: 100,
+  //         product_data: {
+  //           name: "Order Total: ",
+  //           description: "Thank you for your purchase.",
+  //           images: ["https://i.ibb.co/DRvM2RM/med-Dubia-Five-Eights.png"],
   //         },
   //       },
-  //     ],
-  //     customer_email: address,
-  //   });
+  //     },
+  //     {
+  //       quantity: 1,
+  //       price_data: {
+  //         currency: "usd",
+  //         unit_amount: 100,
+  //         product_data: {
+  //           name: "Order Total: ",
+  //           description: "Thank you for your purchase.",
+  //           images: ["https://i.ibb.co/DRvM2RM/med-Dubia-Five-Eights.png"],
+  //         },
+  //       },
+  //     },
+  //   ],
+  //   customer_email: "smackanalex@gmail.com",
+  // });
+
   //   const { error } = await stripe.redirectToCheckout({
   //     sessionId,
   //   });
   //   if (error) {
   //     console.log(error);
   //   }
-
   // };
   return (
     <div className="checkout-page">

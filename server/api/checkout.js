@@ -1,6 +1,7 @@
 const stripeAPI = require("../stripe");
 //create-checkout-session endpoint
 const createCheckoutSession = async (req, res) => {
+  console.log("Hrllo");
   const domainUrl = process.env.WEB_APP_URL;
   const { line_items, customer_email } = req.body;
   // check req body has line items and email
