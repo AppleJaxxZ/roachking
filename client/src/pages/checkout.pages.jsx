@@ -9,8 +9,8 @@ import { useStripe } from "@stripe/react-stripe-js";
 import CheckoutItem from "../components/checkout-item/checkout-item.components";
 import { fetchFromAPI } from "../components/API/helpers";
 // import StripeCheckoutButton from "../components/stripecheckoutbutton/stripecheckoutbutton.component";
-import axios from "axios";
-import e from "cors";
+// import axios from "axios";
+// import e from "cors";
 
 const CheckoutPage = ({ cartItems, total }) => {
   const [address, setAddress] = useState("");

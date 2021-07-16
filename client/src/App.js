@@ -12,6 +12,8 @@ import About from "./components/About/About.components";
 import Contact from "./components/Contact/Contact.components";
 import Footer from "./components/Footer/Footer.components";
 import Checkout from "./pages/checkout.pages";
+import Success from "./pages/success.pages";
+import Canceled from "./pages/canceled.pages";
 import { Switch, Route } from "react-router-dom";
 function App() {
   library.add(fab, faEnvelope, faPhone);
@@ -22,6 +24,8 @@ function App() {
       <Navigation />
       <Switch>
         <Route exact path="/checkout" component={Checkout} />
+        <Route path="/success" component={Success} />
+        <Route path="/canceled" component={Canceled} />
       </Switch>
       <Directory />
       <MidSection />
