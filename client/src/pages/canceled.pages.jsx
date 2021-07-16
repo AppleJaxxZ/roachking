@@ -1,12 +1,12 @@
 import React from "react";
-import "./canceled.scss";
+import "./passfail.scss";
 import { withRouter } from "react-router-dom";
 import CustomButton from "../components/custom-button/custom-button.components";
 
 const Canceled = ({ history }) => {
   return (
     <div className="checkout">
-      <h1>Payment Failed</h1>
+      <h1>Payment was canceled or failed</h1>
       <p>Payment was not successful</p>
       <div>
         <CustomButton

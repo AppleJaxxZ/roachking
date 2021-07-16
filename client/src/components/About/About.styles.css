@@ -28,4 +28,6 @@
 #about-header {
   padding: 2px;
   text-decoration: underline;
+  font-size: larger;
+  letter-spacing: 1px;
 }

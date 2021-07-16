@@ -6,7 +6,7 @@ const About = () => {
     <div id="#section1" className="about">
       <div className="flex-about">
         <div className="about-container">
-          <h3 id="about-header">About</h3>
+          <h3 id="about-header"> About</h3>
           <p className="about-paragraph">
             Dragon Feeders is all about selling quality Dubia roaches. Our
             Dubias are bred and fed with care because we know how important it

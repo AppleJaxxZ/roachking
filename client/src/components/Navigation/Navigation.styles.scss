@@ -7,10 +7,15 @@
   display: flex;
   list-style-type: none;
   justify-content: space-around;
+  font-size: 14px;
 
   align-items: center;
   margin-left: 60px;
   margin-right: 60px;
+
+  li {
+    font-size: larger;
+  }
 
   @media screen and (max-width: 860px) {
     margin-left: 30px;
