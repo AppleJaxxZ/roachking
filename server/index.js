@@ -1,22 +1,5 @@
 const express = require("express");
 const cors = require("cors");
-// require("dotenv").config({ path: "./.env" });
-// const createCheckoutSession = require("./api/checkout");
-// const app = express();
-// const port = 5000;
-
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
-// app.use(cors({ origin: true }));
-
-// app.get("/", (req, res) => res.send("Hellloooooo World!"));
-
-// app.post("/create-checkout-session", createCheckoutSession);
-
-// app.listen(port, (error) => {
-//   if (error) throw error;
-//   console.log("Server running on port " + port);
-// });
 
 const path = require("path");
 
@@ -46,6 +29,10 @@ app.post("/create-checkout-session", async (req, res) => {
   try {
     session = await stripeAPI.checkout.sessions.create({
       payment_method_types: ["card"],
+      shipping_rates: ["shr_1JDwj8IzXo7BVw21VdTC23zB"],
+      shipping_address_collection: {
+        allowed_countries: ["US"],
+      },
       mode: "payment",
       line_items,
       customer_email,
@@ -61,6 +48,15 @@ app.post("/create-checkout-session", async (req, res) => {
       .json({ error: "an error occured, unable to create session" });
   }
 });
+
+const fulfillOrder = (session) => {
+  const amountShipping = session.total_details.amount_shipping;
+
+  // TODO: Remove error and implement...
+  throw new Error(`
+    Given the Checkout Session ${session.id}, load your internal order from the database then implement your own fulfillment logic.`);
+};
+
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
 

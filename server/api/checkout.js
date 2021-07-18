@@ -17,6 +17,10 @@ const createCheckoutSession = async (req, res) => {
   try {
     session = await stripeAPI.checkout.sessions.create({
       payment_method_types: ["card"],
+      shipping_rates: ["shr_1JDwj8IzXo7BVw21VdTC23zB"],
+      shipping_address_collection: {
+        allowed_countries: ["US"],
+      },
       mode: "payment",
       line_items,
       customer_email,
