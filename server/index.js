@@ -1,4 +1,5 @@
 const express = require("express");
+const cookie = require("cookie");
 const cors = require("cors");
 
 const path = require("path");
@@ -12,6 +13,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.options("*", cors());
+// // Set a same-site cookie for first-party contexts
+// response.cookie("cookie1", "value1", { sameSite: "lax" });
+// // Set a cross-site cookie for third-party contexts
+// response.cookie("cookie2", "value2", { sameSite: "none", secure: true });
 
 app.post("/create-checkout-session", async (req, res) => {
   const domainUrl = process.env.WEB_APP_URL;
