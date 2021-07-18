@@ -16,8 +16,7 @@ const CheckoutPage = ({ cartItems, total }) => {
   const [address, setAddress] = useState("");
 
   const stripe = useStripe();
-  const payNow = async (e) => {
-    e.preventDefault();
+  const payNow = async () => {
     const line_items = cartItems.map((items) => {
       return {
         quantity: items.quantity,
