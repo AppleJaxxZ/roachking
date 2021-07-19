@@ -8,9 +8,6 @@ const endpointSecret = "whsec_X52GnXlGYGT1JCMevkyaMDF2DEmvaGdl";
 // Using Express
 const app = require("express")();
 
-// Use body-parser to retrieve the raw body as a buffer
-const bodyParser = require("body-parser");
-
 const fulfillOrder = (session) => {
   // TODO: fill me in
   console.log("Fulfilling order", session);
@@ -23,7 +20,7 @@ const fulfillOrder = (session) => {
 
 app.post(
   "/webhook",
-  bodyParser.raw({ type: "application/json" }),
+  app.raw({ type: "application/json" }),
   (request, response) => {
     const payload = request.body;
     const sig = request.headers["stripe-signature"];
