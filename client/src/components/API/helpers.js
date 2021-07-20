@@ -1,6 +1,7 @@
-const API = process.env.PORT || "http://localhost:5000";
-
 if (process.env.NODE_ENV !== "production") require("dotenv").config();
+
+const API = "http://roachkings.herokuapp.com" || "http://localhost:5000";
+
 export async function fetchFromAPI(endpoint, opts) {
   const { method, body } = { method: "POST", body: null, ...opts };
 
