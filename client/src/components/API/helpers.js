@@ -1,5 +1,4 @@
-const API = "http://localhost:5000";
-
+const API = "http://localhost:5000" || "process.env.PORT";
 export async function fetchFromAPI(endpoint, opts) {
   const { method, body } = { method: "POST", body: null, ...opts };
 
