@@ -1,4 +1,6 @@
-const API = "http://localhost:5000" || "process.env.PORT";
+const API = process.env.PORT || "http://localhost:5000";
+
+if (process.env.NODE_ENV !== "production") require("dotenv").config();
 export async function fetchFromAPI(endpoint, opts) {
   const { method, body } = { method: "POST", body: null, ...opts };
 
