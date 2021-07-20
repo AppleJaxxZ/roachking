@@ -7,6 +7,7 @@ const endpointSecret = "whsec_X52GnXlGYGT1JCMevkyaMDF2DEmvaGdl";
 
 // Using Express
 const app = require("express")();
+const port = process.env.PORT || 5000;
 
 const fulfillOrder = (session) => {
   // TODO: fill me in
@@ -46,4 +47,4 @@ app.post(
   }
 );
 
-app.listen(5000, () => console.log("Running on port 5000"));
+app.listen(port, () => console.log("Running on port 5000"));
