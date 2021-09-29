@@ -16,12 +16,6 @@
   letter-spacing: 1px;
 }
 
-p,
-p,
-i {
-  font-size: 20px;
-}
-
 .fa-contact-icons {
   display: flex;
   justify-content: space-around;

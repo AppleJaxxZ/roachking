@@ -15,13 +15,15 @@ import Checkout from "./pages/checkout.pages";
 import Success from "./pages/success.pages";
 import Canceled from "./pages/canceled.pages";
 import { Switch, Route } from "react-router-dom";
+import FirstSection from "./components/first-section/firstSection.components";
 function App() {
   library.add(fab, faEnvelope, faPhone);
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
 
       <Navigation />
+      <FirstSection />
       <Switch>
         <Route exact path="/checkout" component={Checkout} />
         <Route path="/success" component={Success} />

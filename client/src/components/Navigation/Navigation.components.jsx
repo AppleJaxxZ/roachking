@@ -11,17 +11,27 @@ const Navigation = ({ hidden }) => {
   return (
     <nav className="nav-flex">
       <ul className="menu-nav">
+        <li>
+          {" "}
+          <h1 className="dragonFeeders">Dragon Feeders</h1>
+        </li>
         <Link to="/">
-          <li key={1}>Home</li>
+          <li className="nav-link" key={1}>
+            Home
+          </li>
         </Link>
         <Link to="#section1">
-          <li key={1}>About</li>
+          <li className="nav-link" key={1}>
+            About
+          </li>
         </Link>
         {/* <Link to='#section2'><li key={2}>Testmonial</li></Link> */}
         <Link to="#section3">
-          <li key={3}>Shop</li>
+          <li className="nav-link" key={3}>
+            Shop
+          </li>
         </Link>
-        <Link to="#section4">
+        <Link className="nav-link" to="#section4">
           <li key={4}>Contact Us</li>
         </Link>
         <li style={{ backgroundColor: "white", position: "relative" }}>

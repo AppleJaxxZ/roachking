@@ -1,0 +1,47 @@
+.section-container {
+  position: relative;
+  width: 95%;
+  text-align: center;
+  opacity: 0.6;
+
+  // filter: blur(5px);
+  overflow: none;
+  z-index: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.bgimage {
+  width: 95vw;
+  overflow: none;
+}
+
+.titleOver {
+  position: absolute;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  color: white;
+  font-size: 1rem;
+  z-index: 2;
+  top: 90px;
+  left: 50px;
+}
+
+.textOver {
+  position: absolute;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  z-index: 2;
+  text-align: justify;
+  top: 110px;
+  left: 40px;
+
+  color: #ffffff;
+}
+
+.overlay-text {
+  z-index: 3;
+}
