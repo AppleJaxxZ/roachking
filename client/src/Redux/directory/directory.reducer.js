@@ -1,7 +1,7 @@
 const INITIAL_STATE = {
   sections: [
     {
-      title: "extra-small",
+      title: "x-small",
       imageUrl: "https://i.ibb.co/B6kqz46/xsmDubia.png",
       name: "Xtra small roaches",
       description: "Roaches of the smallest size.",
@@ -38,7 +38,7 @@ const INITIAL_STATE = {
       linkUrl: "largedubia",
     },
     {
-      title: "extraLarge",
+      title: "x-Large",
       imageUrl: "https://i.ibb.co/8mPVyXS/xlDubia.png",
       name: "Extra Large Roaches",
       description: "Roaches of the maximum size.",

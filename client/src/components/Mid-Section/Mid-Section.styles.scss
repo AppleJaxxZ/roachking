@@ -1,20 +1,38 @@
+.mid-section-container {
+  width: 95vw;
+}
+
 .mid-container {
-  width: 100%;
+  width: 95vw;
+  // display: flex;
+  // justify-content: center;
+  // flex-direction: row;
   display: flex;
-  justify-content: center;
-  padding: 0;
-  margin: 0;
+  flex-direction: row;
+
   @media screen and (max-width: 640px) {
-    margin-left: 15%;
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 427px) {
+    margin-left: 40px;
   }
 }
 
 .colonyImages {
-  padding: 10px;
-  margin-top: 10px;
+  margin: 10px auto 0px auto;
+  padding: 5px;
+  width: 25vw;
+  min-width: 211px;
 }
 
 .flex-colony {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+}
+
+.page-break {
+  width: 95vw;
+  height: 0;
+  margin: 0 auto;
+  border: 2px solid #ffa234;
 }
