@@ -1,10 +1,33 @@
 import React from "react";
-import "./About.styles.css";
+import "./About.styles.scss";
 
 const About = () => {
   return (
     <div id="#section1" className="about">
-      <div className="flex-about">
+      <div className="bg-arrows"></div>
+      <div className="bg-arrows"></div>
+      <div className="bg-arrows"></div>
+      <div className="bg-arrows"></div>
+      <div className="bg-arrows"></div>
+      <div className="bg-arrows"></div>
+      <div className="bg-arrows"></div>
+      <div className="bg-arrows"></div>
+      <div className="bg-arrows"></div>
+      <div className="bg-arrows"></div>
+      <div className="bg-arrows"></div>
+
+      <h3 className="about-title">About</h3>
+      <div className="card-right">
+        <p className="about-section">
+          Dragon Feeders is all about selling quality Dubia roaches. Our Dubias
+          are bred and fed with care because we know how important it is to feed
+          your reptiles and/or pets only the healthiest and most nutritious
+          roaches. The saying goes "You are what you eat", so rest assured your
+          pets will be getting the best quality dubia roaches around. Thank you
+          for shopping at Dragon Feeders.
+        </p>
+      </div>
+      {/* <div className="flex-about">
         <div className="about-container">
           <h3 id="about-header"> About</h3>
           <p className="about-paragraph">
@@ -35,7 +58,7 @@ const About = () => {
             include water crystals and our homemade Dubia Chow!
           </p>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -1,0 +1,85 @@
+.about {
+  position: relative;
+  height: 360px;
+  width: 90vw;
+  background-color: #ffff;
+  display: flex;
+  margin: 0 auto;
+}
+
+.bg-arrows {
+  height: 360px;
+  width: 100vw;
+  background-color: #f0f0f4;
+  clip-path: polygon(73% 0, 98% 49%, 75% 100%, 63% 100%, 89% 48%, 61% 0);
+  z-index: 5;
+}
+
+/* .flex-about {
+  display: flex;
+  background-color: white;
+}
+
+.about-paragraph {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.mission-section {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.service-paragraph {
+  padding-left: 4px;
+  padding-right: 8px;
+}
+
+#about-header {
+  padding: 2px;
+  text-decoration: underline;
+  font-size: larger;
+  letter-spacing: 1px;
+} */
+
+.card-right {
+  position: absolute;
+  width: 438px;
+  height: 213px;
+  background-color: #fdb054;
+  z-index: 6;
+  right: 20px;
+  margin-top: 40px;
+  border: 1px solid black;
+  @media screen and (max-width: 400px) {
+    width: 90vw;
+    height: 300px;
+  }
+}
+
+.about-title {
+  position: absolute;
+  font-size: 44px;
+  font-weight: 800;
+  margin-left: 150px;
+  margin-top: 150px;
+  z-index: 7;
+  color: #e58310;
+  @media screen and (max-width: 800px) {
+    margin-top: 50px;
+    margin-right: 170px;
+    position: sticky;
+  }
+}
+
+.about-section {
+  color: white;
+  font-weight: 700;
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  @media screen and (max-width: 800px) {
+    padding-top: 60px;
+  }
+}

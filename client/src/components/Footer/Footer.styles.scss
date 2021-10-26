@@ -11,4 +11,10 @@
 .footer-content {
   display: flex;
   justify-content: center;
+  @media screen and (max-width: 360px) {
+    margin-top: 70px;
+  }
+  @media screen and (max-width: 300px) {
+    margin-top: 90px;
+  }
 }
