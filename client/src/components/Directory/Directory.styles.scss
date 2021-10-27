@@ -100,6 +100,12 @@ $height: 330px;
     top: 200px;
     margin-left: 100px;
     display: none;
+    background-color: #e68310;
+    @media screen and (max-width: 1090px) {
+      top: 100px;
+      width: 3rem !important;
+      font-size: 0.5rem !important;
+    }
   }
 
   &:hover {
