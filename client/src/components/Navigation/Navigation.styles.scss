@@ -47,6 +47,12 @@
   }
 
   @media screen and (max-width: 560px) {
+    // display: none;
+  }
+}
+
+.nav-hide {
+  @media screen and (max-width: 560px) {
     display: none;
   }
 }

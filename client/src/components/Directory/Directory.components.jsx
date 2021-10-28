@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import "./Directory.styles.scss";
 import CustomButton from "../custom-button/custom-button.components";
@@ -8,6 +8,9 @@ import { addItem } from "../../Redux/cart/cart.actions";
 import { createStructuredSelector } from "reselect";
 
 const Directory = ({ sections, addItem }) => {
+  const [selected, setSelected] = useState(false);
+  const showSelected = () => setSelected(!selected);
+
   return (
     <div className="directory-container">
       <h2 className="bestSellers">Best Sellers</h2>
@@ -23,18 +26,22 @@ const Directory = ({ sections, addItem }) => {
             </div>
 
             <CustomButton
-              onClick={() => {
-                addItem({
-                  id: id,
-                  title: title,
-                  imageUrl: imageUrl,
-                  price: price,
-                });
-                //   console.log(title);
-                //call action
-              }}
+              className={selected ? "custom-button active" : "custom-button"}
+              onClick={
+                (() => {
+                  addItem({
+                    id: id,
+                    title: title,
+                    imageUrl: imageUrl,
+                    price: price,
+                  });
+                  //   console.log(title);
+                  //call action
+                },
+                showSelected)
+              }
             >
-              Add to cart
+              {selected ? "Add to cart" : "Added!"}
             </CustomButton>
           </div>
         ))}

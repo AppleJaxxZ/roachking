@@ -36,9 +36,8 @@ const Contact = () => {
             </a>
           </div>
           <h5>
-            We are located in Easton, Pa. If you'd like to set-up an in person
-            purchase please Email, Text, or Call us. Phone Calls Will Be
-            Accepted between 10am and 6pm Eastern Standard Time. -Thank you! .{" "}
+            Phone Calls Will Be Accepted between 10am and 6pm Eastern Standard
+            Time. -Thank you! .{" "}
           </h5>
         </div>
       </div>

@@ -1,11 +1,11 @@
 .section-container {
   position: relative;
-  width: 95%;
+  width: 90vw;
   text-align: center;
   opacity: 0.6;
 
   // filter: blur(5px);
-  overflow: none;
+  overflow-x: hidden;
   z-index: 1;
   padding: 0;
   margin: 0;
@@ -26,6 +26,7 @@
   z-index: 2;
   top: 90px;
   left: 50px;
+  margin: 0 auto;
 }
 
 .overlay-text {

@@ -1,5 +1,8 @@
 .mid-section-container {
   width: 95vw;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
 }
 
 .mid-container {
