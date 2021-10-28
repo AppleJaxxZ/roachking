@@ -8,7 +8,7 @@ const FirstSection = () => {
       <img className="bgimage" alt="roach colony" src={roachbkg} />
       <div className="overlay-text">
         <h1 className="titleOver">
-          SITE UNDER CONSTRUCTION - COME BACK MID OCTOBER 2021
+          SITE UNDER CONSTRUCTION - Completion Date - Nov 1st-2021
         </h1>
       </div>
     </div>

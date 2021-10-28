@@ -16,12 +16,13 @@ import Success from "./pages/success.pages";
 import Canceled from "./pages/canceled.pages";
 import { Switch, Route } from "react-router-dom";
 import FirstSection from "./components/first-section/firstSection.components";
+import MobileNav from "./components/mobile-navbar/MobileNav.components";
 function App() {
   library.add(fab, faEnvelope, faPhone);
   return (
     <div>
       {/* <Header /> */}
-
+      <MobileNav />
       <Navigation />
       <FirstSection />
       <Switch>
