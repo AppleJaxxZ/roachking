@@ -24,12 +24,12 @@ function App() {
       {/* <Header /> */}
       <MobileNav />
       <Navigation />
-      <FirstSection />
       <Switch>
         <Route exact path="/checkout" component={Checkout} />
         <Route path="/success" component={Success} />
         <Route path="/canceled" component={Canceled} />
       </Switch>
+      <FirstSection />
       <Directory />
       <MidSection />
       <About />
