@@ -25,7 +25,6 @@ const Directory = ({ sections, addItem }) => {
             </div>
 
             <CustomButton
-              className={selected ? "custom-button actve" : "custom-button"}
               onClick={() => {
                 addItem({
                   id: id,
