@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import "./Directory.styles.scss";
 import CustomButton from "../custom-button/custom-button.components";
@@ -10,7 +10,6 @@ import { createStructuredSelector } from "reselect";
 const Directory = ({ sections, addItem }) => {
   const [selected, setSelected] = useState(false);
   const showSelected = () => setSelected(!selected);
-
   return (
     <div className="directory-container">
       <h2 className="bestSellers">Best Sellers</h2>
@@ -26,22 +25,20 @@ const Directory = ({ sections, addItem }) => {
             </div>
 
             <CustomButton
-              className={selected ? "custom-button active" : "custom-button"}
-              onClick={
-                (() => {
-                  addItem({
-                    id: id,
-                    title: title,
-                    imageUrl: imageUrl,
-                    price: price,
-                  });
-                  //   console.log(title);
-                  //call action
-                },
-                showSelected)
-              }
+              className={selected ? "custom-button actve" : "custom-button"}
+              onClick={() => {
+                addItem({
+                  id: id,
+                  title: title,
+                  imageUrl: imageUrl,
+                  price: price,
+                });
+
+                //   console.log(title);
+                //call action
+              }}
             >
-              {selected ? "Add to cart" : "Added!"}
+              Add to cart
             </CustomButton>
           </div>
         ))}

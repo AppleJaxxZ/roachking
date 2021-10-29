@@ -99,6 +99,7 @@ $height: 330px;
     position: absolute;
     top: 200px;
     margin-left: 100px;
+    color: black;
     display: none;
     background-color: #e68310;
     @media screen and (max-width: 1090px) {
@@ -119,17 +120,5 @@ $height: 330px;
       width: 220px;
       margin-right: 100px;
     }
-  }
-}
-.custom-button.active {
-  animation: colorChange 1s ease-out;
-}
-
-@keyframes colorChange {
-  0% {
-    background-color: grey;
-  }
-  100% {
-    background-color: blue;
   }
 }

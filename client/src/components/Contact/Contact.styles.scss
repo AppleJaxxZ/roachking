@@ -1,0 +1,13 @@
+.contact-container {
+  height: auto;
+  width: 80vw;
+  background-color: white;
+  margin-top: 10px;
+  padding: 5px;
+  margin-top: 20px;
+
+  .flex-contact {
+    display: flex;
+    justify-content: space-around;
+  }
+}
