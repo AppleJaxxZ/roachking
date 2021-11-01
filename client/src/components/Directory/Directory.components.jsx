@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./Directory.styles.scss";
 import CustomButton from "../custom-button/custom-button.components";
@@ -8,8 +8,16 @@ import { addItem } from "../../Redux/cart/cart.actions";
 import { createStructuredSelector } from "reselect";
 
 const Directory = ({ sections, addItem }) => {
-  const [selected, setSelected] = useState(false);
-  const showSelected = () => setSelected(!selected);
+  const addAndAlert = async ({
+    id: id,
+    title: title,
+    imageUrl: imageUrl,
+    price: price,
+  }) => {
+    await addItem({ id: id, title: title, imageUrl: imageUrl, price: price });
+    await alert("Item added to shopping cart.");
+  };
+
   return (
     <div className="directory-container">
       <h2 className="bestSellers">Best Sellers</h2>
@@ -24,21 +32,7 @@ const Directory = ({ sections, addItem }) => {
               </div>
             </div>
 
-            <CustomButton
-              onClick={() => {
-                addItem({
-                  id: id,
-                  title: title,
-                  imageUrl: imageUrl,
-                  price: price,
-                });
-
-                //   console.log(title);
-                //call action
-              }}
-            >
-              Add to cart
-            </CustomButton>
+            <CustomButton onClick={addAndAlert}>Add to cart</CustomButton>
           </div>
         ))}
       </div>

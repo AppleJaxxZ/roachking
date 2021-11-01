@@ -5,6 +5,7 @@
   background-color: #ffff;
   display: flex;
   margin: 0 auto;
+  margin-top: 30px;
   @media screen and (max-width: 460) {
     justify-content: start;
   }
@@ -58,6 +59,7 @@
   margin-top: 40px;
   border: 1px solid black;
   border-radius: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   @media screen and (max-width: 460px) {
     width: 90vw;
     height: 300px;
@@ -74,13 +76,14 @@
   margin-top: 150px;
   z-index: 7;
   color: #e58310;
+
   @media screen and (max-width: 800px) {
     margin-top: 50px;
     margin-right: 1px;
     position: absolute;
   }
   @media screen and (max-width: 460px) {
-    color: black;
+    color: rgb(121, 115, 115);
   }
 }
 
