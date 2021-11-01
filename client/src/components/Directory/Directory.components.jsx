@@ -8,15 +8,22 @@ import { addItem } from "../../Redux/cart/cart.actions";
 import { createStructuredSelector } from "reselect";
 
 const Directory = ({ sections, addItem }) => {
-  const addAndAlert = async ({
-    id: id,
-    title: title,
-    imageUrl: imageUrl,
-    price: price,
-  }) => {
-    await addItem({ id: id, title: title, imageUrl: imageUrl, price: price });
-    await alert("Item added to shopping cart.");
-  };
+  // () => {
+  //   addItem({
+  //     id: id,
+  //     title: title,
+  //     imageUrl: imageUrl,
+  //     price: price,
+  //   });
+  // const addAndAlert = async (e, {
+  //   id: id,
+  //   title: title,
+  //   imageUrl: imageUrl,
+  //   price: price,
+  // }) => {
+  //   await addItem({ id, title, imageUrl, price });
+  //   await alert("Item added to shopping cart.");
+  // };
 
   return (
     <div className="directory-container">
@@ -32,7 +39,17 @@ const Directory = ({ sections, addItem }) => {
               </div>
             </div>
 
-            <CustomButton onClick={addAndAlert}>Add to cart</CustomButton>
+            <CustomButton
+              onClick={() => {
+                addItem({
+                  id: id,
+                  title: title,
+                  imageUrl: imageUrl,
+                  price: price,
+                });
+                alert("Item added to cart");
+              }}
+            ></CustomButton>
           </div>
         ))}
       </div>
