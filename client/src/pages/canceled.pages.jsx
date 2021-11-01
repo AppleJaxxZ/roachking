@@ -7,7 +7,7 @@ const Canceled = ({ history }) => {
   return (
     <div className="checkout">
       <h1>Payment was canceled or failed</h1>
-      <p>Payment was not successful</p>
+      <p>Payment was not successful!</p>
       <div>
         <CustomButton
           className="custom-button"
