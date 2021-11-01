@@ -12,7 +12,7 @@ const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-app.options("*", cors());
+app.options("*", cors({ origin: true }));
 // // Set a same-site cookie for first-party contexts
 // response.cookie("cookie1", "value1", { sameSite: "lax" });
 // // Set a cross-site cookie for third-party contexts
