@@ -2,12 +2,17 @@
   height: auto;
   width: 80vw;
   background-color: white;
-  margin-top: 10px;
+  margin-bottom: 20px;
   padding: 5px;
-  margin-top: 20px;
+  margin-top: 40px;
 
   .flex-contact {
     display: flex;
     justify-content: space-around;
+    color: #128ced;
   }
+}
+
+#icon {
+  color: #128ced;
 }

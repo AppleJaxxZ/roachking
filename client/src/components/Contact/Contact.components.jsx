@@ -10,7 +10,7 @@ const Contact = () => {
     <div id="#section4" className="contact-container">
       <div className="flex-contact">
         <a href="tel:+1(484)-309-3456">
-          <FontAwesomeIcon id="icon" icon={faPhone} size="1x" />
+          <FontAwesomeIcon id="icon" icon={faPhone} size="2x" />
         </a>
         <Link
           to="#"
@@ -19,14 +19,14 @@ const Contact = () => {
             e.preventDefault();
           }}
         >
-          <FontAwesomeIcon id="icon" icon={faEnvelope} size="1x" />
+          <FontAwesomeIcon id="icon" icon={faEnvelope} size="2x" />
         </Link>
         <a
           href="https://www.instagram.com/dragonfeeders"
           rel="noreferrer"
           target="_blank"
         >
-          <FontAwesomeIcon id="icon" icon={["fab", "instagram"]} size="1x" />
+          <FontAwesomeIcon id="icon" icon={["fab", "instagram"]} size="2x" />
         </a>
       </div>
     </div>
