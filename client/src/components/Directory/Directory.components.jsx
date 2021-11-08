@@ -49,7 +49,9 @@ const Directory = ({ sections, addItem }) => {
                 });
                 alert("Item added to cart");
               }}
-            ></CustomButton>
+            >
+              Buy Now
+            </CustomButton>
           </div>
         ))}
       </div>

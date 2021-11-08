@@ -99,7 +99,7 @@ $height: 330px;
     position: absolute;
     top: 200px;
     margin-left: 100px;
-    color: black;
+    color: black !important;
     display: none;
     background-color: #e68310;
     @media screen and (max-width: 1090px) {
