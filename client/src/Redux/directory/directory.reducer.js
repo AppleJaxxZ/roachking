@@ -2,7 +2,7 @@ const INITIAL_STATE = {
   sections: [
     {
       title: "x-small",
-      imageUrl: "https://i.ibb.co/B6kqz46/xsmDubia.png",
+      imageUrl: "client/src/media/Dubiaxsm.png",
       name: "Xtra small roaches",
       description: "Roaches of the smallest size.",
       id: 1,

@@ -1,17 +1,7 @@
-// https://i.ibb.co/xgcjcqm/dubia-Chow.png
-
-// https://i.ibb.co/VYybJdm/roach-Colony.png
-
-// https://i.ibb.co/ZXhsNRz/roaches5.png
-// https://i.ibb.co/qMVynqD/roaches6.png
-// https://i.ibb.co/x2QSfCz/roacheseating.png
-// https://i.ibb.co/b2cNJMg/roach-Size-Measured.png
-// https://i.ibb.co/0KTdMNm/roach-Size-Plain.png
-
 export const directoryData = [
   {
     title: "xtra small",
-    imageUrl: "https://i.ibb.co/B6kqz46/xsmDubia.png",
+    imageUrl: "./client/src/media/Dubiaxsm.png",
     name: "Xtra small roaches",
     description: "Roaches of the smallest size.",
     id: 1,
