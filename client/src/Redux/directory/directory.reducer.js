@@ -2,7 +2,7 @@ const INITIAL_STATE = {
   sections: [
     {
       title: "x-small",
-      imageUrl: "https://i.ibb.co/B6kqz46/xsmDubia.png",
+      imageUrl: "https://i.ibb.co/rpQqF2v/Dubiaxsm.png",
       name: "Xtra small roaches",
       description: "Roaches of the smallest size.",
       id: 1,
@@ -11,7 +11,7 @@ const INITIAL_STATE = {
     },
     {
       title: "small",
-      imageUrl: "https://i.ibb.co/mJN7GJt/sm-Dubia-Half-Inch.png",
+      imageUrl: "https://i.ibb.co/VQPhhWB/sm-Dubia-Half-Inch.png",
       name: "small roaches",
       description: "Small dubia roaches.",
       id: 2,
@@ -20,7 +20,7 @@ const INITIAL_STATE = {
     },
     {
       title: "medium",
-      imageUrl: "https://i.ibb.co/DRvM2RM/med-Dubia-Five-Eights.png",
+      imageUrl: "https://i.ibb.co/gtQpzXM/med-Dubia-Three-Forths.png",
       name: "Medium",
       description: "Medium Roaches.",
       id: 3,
@@ -29,7 +29,7 @@ const INITIAL_STATE = {
     },
     {
       title: "large",
-      imageUrl: "https://i.ibb.co/hK32xt3/lrgDubia.png",
+      imageUrl: "https://i.ibb.co/8DshsJX/lrgDubia.png",
       name: "Large Roaches",
       description: " Large Adult Roaches .",
       size: "large",
@@ -39,7 +39,7 @@ const INITIAL_STATE = {
     },
     {
       title: "x-Large",
-      imageUrl: "https://i.ibb.co/8mPVyXS/xlDubia.png",
+      imageUrl: "https://i.ibb.co/LdmJ154/xlDubia.png",
       name: "Extra Large Roaches",
       description: "Roaches of the maximum size.",
       size: "large",

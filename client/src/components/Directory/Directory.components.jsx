@@ -32,7 +32,7 @@ const Directory = ({ sections, addItem }) => {
         {sections.map(({ id, title, imageUrl, price }) => (
           <div key={id} className="collection-item">
             <div className="card">
-              <img src={imageUrl} alt="Avatar" />
+              <img src={imageUrl} alt="Roach's" />
               <div className="container">
                 <p id="price">${price}</p>
                 <p id="title">{title.toUpperCase()}</p>
