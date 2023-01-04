@@ -4,7 +4,7 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 
-import Header from "./components/Header/Header.components";
+// import Header from "./components/Header/Header.components";
 import Navigation from "./components/Navigation/Navigation.components";
 import Directory from "./components/Directory/Directory.components";
 import MidSection from "./components/Mid-Section/Mid-Section.components";
