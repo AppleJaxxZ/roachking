@@ -7,7 +7,7 @@ const endpointSecret = "whsec_X52GnXlGYGT1JCMevkyaMDF2DEmvaGdl";
 
 // Using Express
 const app = require("express")();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 8000;
 
 const fulfillOrder = (session) => {
   // TODO: fill me in
