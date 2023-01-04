@@ -1,4 +1,4 @@
-if (process.env.NODE_ENV !== "production") require("dotenv").config();
+// if (process.env.NODE_ENV !== "production") require("dotenv").config();
 
 const API = "https://roachking.herokuapp.com" || "http://localhost:5000";
 
