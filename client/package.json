@@ -17,13 +17,10 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
-    "crypto-browserify": "^3.12.0",
     "fs": "^0.0.1-security",
     "path": "^0.12.7",
-    "path-browserify": "^1.0.1",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
-    "react-app-rewired": "^2.2.1",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
     "react-redux": "^7.2.4",
@@ -37,9 +34,9 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-app-rewired start",
-    "build": "react-app-rewired build",
-    "test": "react-app-rewired test",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -63,10 +60,7 @@
   "devDependencies": {
     "assert": "^2.0.0",
     "buffer": "^6.0.3",
-    "https-browserify": "^1.0.0",
-    "os-browserify": "^0.3.0",
     "process": "^0.11.10",
-    "stream-browserify": "^3.0.0",
     "stream-http": "^3.2.0",
     "url": "^0.11.0"
   }
